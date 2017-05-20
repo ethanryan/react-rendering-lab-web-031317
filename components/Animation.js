@@ -28,6 +28,17 @@ export default class Animation extends React.Component {
     setTimeout(() => progressBar.className = 'off', 1100);
   }
 
+  // componentWillUpdate(nextProps, nextState) {
+  //   if (nextState.open == true && this.state.open == false) {
+  //     this.props.onWillOpen();
+  //   }
+  // }
+
+  componentWillUpdate(nextProps, nextState) {
+      this.showLoadingBar();
+  }
+
+
   render() {
     return (
       <div>
